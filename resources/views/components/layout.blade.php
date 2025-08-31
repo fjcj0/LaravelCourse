@@ -11,7 +11,15 @@
 </head>
 
 <body>
-    <h1>hello world!!</h1>
+    <nav>
+        <ul>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+            <a href="/meet-the-team">Team</a>
+        </ul>
+    </nav>
+    {{ $slot }}
 </body>
 
 </html>
