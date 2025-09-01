@@ -1,6 +1,6 @@
 <x-layout>
     <x-slot:heading>
-        <div class="w-screen flex items-center justify-between">
+        <div class="w-full flex items-center justify-between">
             <h1 class="text-black text-3xl font-bold">Job</h1>
             <a href="/jobs" class="p-3 bg-black text-white rounded-xl">Go to jobs</a>
         </div>
