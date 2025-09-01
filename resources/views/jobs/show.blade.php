@@ -9,4 +9,7 @@
         <strong>{{ $job['title'] }}: </strong>
         <p>{{ $job['salary'] }}</p>
     </div>
+    <div class="p-3">
+        <a href="/job/{{$job->id}}/edit" class="p-3 rounded-lg bg-black text-white">Edit Job</a>
+    </div>
 </x-layout>
