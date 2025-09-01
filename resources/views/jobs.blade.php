@@ -2,12 +2,15 @@
     <x-slot:heading>
         <h1 class="text-black text-3xl font-bold">Job Listings</h1>
     </x-slot:heading>
-    <div class="p-3">
+    <div class="p-3 flex flex-col gap-5">
         @foreach ($jobs as $job)
-        <a href="/job/{{ $job['id'] }}" class="flex my-3 text-blue-600 underline">
-            <strong>{{ $job['title'] }}: </strong>
-            <p>{{ $job['salary'] }}</p>
-        </a>
+            <a href="/job/{{ $job['id'] }}">
+                <h1 class="font-bold text-xl text-black">{{ $job->employer->name }}</h1>
+                <div class="flex text-blue-600 hover:text-blue-900 duration-300 ease underline">
+                    <strong>{{ $job['title'] }}: </strong>
+                    <p>{{ $job['salary'] }}</p>
+                </div>
+            </a>
         @endforeach
     </div>
 </x-layout>
