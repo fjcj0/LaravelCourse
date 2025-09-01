@@ -39,7 +39,7 @@ class JobController extends Controller
     public function edit(Job $job)
     {
         if (!$job) abort(404);
-        Gate::authorize('edit-job', $job);
+        //Gate::authorize('edit-job', $job);
         return view('jobs.edit', ['job' => $job]);
     }
     public function update(Job $job)
@@ -48,10 +48,6 @@ class JobController extends Controller
             'title' => ['required', 'min:4'],
             'salary' => ['required'],
         ]);
-        /*
-    $job->title = request('title');
-    $job->salary = request('salary');
-    */
         $job->update([
             'title' => request('title'),
             'salary' => request('salary'),
