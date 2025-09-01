@@ -13,8 +13,8 @@ Route::controller(JobController::class)->group(function () {
 });
 
 Route::controller(JobController::class)
-    ->middleware(['auth', 'can:edit-job,job'])
-    ->group(callback: function () {
+    ->middleware(['auth', 'can:edit,job'])
+    ->group(function () {
         Route::get('/jobs/create', 'create');
         Route::post('/jobs', 'store');
         Route::get('/job/{job}/edit', 'edit');
