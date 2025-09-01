@@ -8,7 +8,7 @@ Route::get('/', function () {
 });
 
 Route::get('/jobs', function () {
-    return view('jobs', ['jobs' => Job::with('employer')->get()]);
+    return view('jobs', ['jobs' => Job::with('employer')->cursorPaginate(5)]);
 });
 
 Route::get('/job/{id}', function ($id) {
